@@ -1,0 +1,120 @@
+ #star-five {
+     /* 绘制左侧钝角三角形 */
+     /* 左边长度与底部Buttom长度为 10：7 */
+     /*  右边长度同理*/
+     /*  右边长度同理*/
+     /*  旋转角度为35度*/
+     margin: 100px 0;
+     position: relative;
+     display: inline-block;
+     /* banground-color: red; */
+     width: 0;
+     height: 0;
+     border-top: 0;
+     border-left: 100px solid transparent;
+     /* 设置左部分为透明*/
+     border-right: 100px solid transparent;
+     border-bottom: 70px solid gold;
+     /*旋转角度为顺时针35度*/
+     -moz-transform: rotate(35deg);
+     /*Firefox*/
+     -webkit-transform: rotate(35deg);
+     /*Safari 和 Chrome*/
+     -ms-transform: rotate(35deg);
+     /*IE 9*/
+     -o-transform: rotate(35deg);
+     /* Opera*/
+ }
+ 
+ #star-five:hover {
+     transform: scale(1.9);
+ }
+ 
+ #star-five::before {
+     /* 绘制顶部三角形 */
+     /* Before的Buttom长度与原元素left/right长度为 10：8 */
+     /*  左边长度right与原元素left 比例为10 ：3*/
+     /*  右边长度同理*/
+     /*  top 位移为原left长度比例 10：4.5*/
+     /*  left 位移为原left长度比例 10：6.5*/
+     /*  旋转角度为负35度（因为旋转前垂直body，star旋转后需逆向）*/
+     content: "";
+     /* border: solid; */
+     position: absolute;
+     top: -45px;
+     left: -65px;
+     border-bottom: 80px greenyellow solid;
+     border-left: 30px transparent solid;
+     border-right: 30px transparent solid;
+     /*旋转角度为顺时针35度*/
+     -moz-transform: rotate(-35deg);
+     -o-transform: rotate(-35deg);
+     -webkit-transform: rotate(-35deg);
+     -ms-transform: rotate(-35deg);
+ }
+ 
+ #star-five::after {
+     /* 绘制右侧钝角三角形 */
+     /* 左边长度与底部Buttom长度为 10：7 */
+     /*  右边长度同理*/
+     /*  top向下微调0.05 left单位像素*/
+     /* left向左1.07 left单位像素*/
+     /*  旋转角度为70度（与原star三角形对称）*/
+     content: "";
+     position: absolute;
+     width: 0;
+     height: 0;
+     color: gold;
+     top: 5px;
+     left: -107px;
+     border-left: 100px solid transparent;
+     border-right: 100px solid transparent;
+     border-bottom: 70px solid skyblue;
+     /* 逆时针调整70度 */
+     -moz-transform: rotate(-70deg);
+     -o-transform: rotate(-70deg);
+     -webkit-transform: rotate(-70deg);
+     -ms-transform: rotate(-70deg);
+ }
+ 
+ #retangle {
+     position: relative;
+     /* display: inline; */
+     height: 0;
+     width: 0;
+     border: solid 50px;
+     border-color: transparent skyblue red;
+ }
+ 
+ #retangle::after {
+     content: "after";
+     position: absolute;
+     top: -50px;
+     left: 100px;
+     height: 0;
+     width: 0;
+     border: solid 50px;
+     border-color: transparent transparent red;
+     -moz-transform: rotate(35deg);
+ }
+ 
+ #retangle::before {
+     content: "before";
+     position: absolute;
+     display: block;
+     top: 100px;
+     left: 100px;
+     height: 0;
+     width: 0;
+     border: solid 50px;
+     border-color: red transparent skyblue;
+ }
+ 
+ #meter {
+     margin-top: 50px;
+     position: absolute;
+     border-top: 50px solid rebeccapurple;
+     border-bottom: 50px solid red;
+     border-left: 25px solid skyblue;
+     border-right: 85px solid greenyellow;
+ }
