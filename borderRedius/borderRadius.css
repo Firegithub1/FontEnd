@@ -1,0 +1,64 @@
+  * {
+      box-sizing: border-box;
+      margin: 15px;
+  }
+  /* 通过修改border-radius的长宽比构造图形 */
+  
+  .demo01 {
+      width: 6vh;
+      height: 6vh;
+      background-color: violet;
+      /* border-radius: 50% 50% 50% 50%; */
+      border-top-left-radius: 50% 30%;
+      border-top-right-radius: 50% 30%;
+      border-bottom-left-radius: 60% 90%;
+      border-bottom-right-radius: 60% 90%;
+  }
+  
+  .demo02 {
+      width: 5vh;
+      height: 5vh;
+      background-color: wheat;
+      border-radius: 50% 50% 50% 50% /65% 35% 0% 35%;
+  }
+  
+  .semiellipse {
+      width: 5vh;
+      height: 5vh;
+      background-color: #22e2e2;
+      border-radius: 50% 50% / 100% 100% 0 0;
+  }
+  
+  .quarterellipse {
+      width: 10vh;
+      height: 5vh;
+      background-color: beige;
+      border-radius: 100% 0/100% 0 0 0;
+  }
+  
+  .ellipse {
+      content: "ellipse";
+      width: 10vh;
+      height: 5vh;
+      background-color: whitesmoke;
+      border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+  
+  .surprise {
+      width: 10vh;
+      height: 5vh;
+      background-color: linen;
+      border-radius: 100% 0 100% 0;
+      border-top: 3px solid red;
+      border-bottom: 3px solid yellow;
+      border-left: 3px solid blue;
+      border-right: 3px solid greenyellow;
+  }
+  
+  .concentricCircle {
+      width: 5vh;
+      height: 5vh;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 30px lavenderblush solid;
+  }
