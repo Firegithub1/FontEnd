@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:class ::label</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+
+            text-align: center;
+            vertical-align: middle;
+
+            border: 3px orange solid;
+        }
+
+        #class:hover {
+            cursor: pointer;
+        }
+
+        #label::after {
+            content: " ";
+            display: inline-block;
+
+            height: 4px;
+            width: 4px;
+            line-height: 4px;
+
+            vertical-align: middle;
+
+            border: 1px steelblue solid;
+            border-radius: 50%;
+
+            position: relative;
+            right: -5px;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 伪类：先是一个类，作用于元素本身 -->
+        <span id="class">class</span>
+    </div>
+    <br>
+    <div class="box">
+        <!-- 先是一个元素，效果作用于新创建的before/after元素 -->
+        <span id="label">label</span>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            background-color: steelblue;
+            width: 60px;
+            height: 50px;
+            margin: 50px;
+            color: coral;
+            font-size: 30px;
+            /* FIXME:脱离文档流 添加overflow */
+            float: left;
+        }
+
+        .box2 {
+            background-color: turquoise;
+            width: 60px;
+            margin: 50px;
+            height: 50px;
+        }
+
+        .container {
+            overflow: hidden;
+            border: 1px solid burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1"></div>
+    </div>
+    <!-- <div class="container">
+        <div class="box2"></div>
+    </div> -->
+</body>
+
+</html>
