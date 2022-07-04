@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper {
+            display: flex;
+            /* flex-direction: column-reverse; */
+            width: 400px;
+            height: 140px;
+        }
+
+        .wrap1 {
+            flex-wrap: wrap;
+        }
+
+        .wrap2 {
+            flex-wrap: nowrap;
+        }
+
+        .wrap3 {
+            flex-wrap: wrap-reverse;
+        }
+
+        .red {
+            width: 50%;
+            height: 50%;
+            background-color: crimson;
+        }
+
+        .blue {
+            width: 50%;
+            height: 50%;
+            background-color: dodgerblue;
+        }
+
+        .orange {
+            height: 50%;
+            width: 50%;
+            background-color: darkorange;
+        }
+    </style>
+    <!-- 在CSS3中，我们可以使用flex-wrap属性来定义弹性盒子内部“子元素”是单行显示还是多行显示。 -->
+</head>
+
+<body>
+    <h3>wrap</h3>
+    <div class="wrapper wrap1">
+
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="orange"></div>
+    </div>
+    <h3>nowrap</h3>
+    <div class="wrapper wrap2">
+
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="orange"></div>
+    </div>
+    <h3>wrap-reverse</h3>
+    <div class="wrapper wrap3">
+
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="orange"></div>
+    </div>
+</body>
+
+</html>

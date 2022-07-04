@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-shadow</title>
+    <style lang="">
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            border: .5em solid lawngreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 55em;
+            height: 55em;
+            /* text-align: center; */
+            background-color: lavender;
+            box-shadow: 10px 10px 3px rgb(183, 122, 122) inset;
+
+            /* box-shadow: h-shadow v-shadow blur spread color inset; */
+            /* h-shadow 必需。水平阴影的位置。允许负值。 测试
+            v-shadow 必需。垂直阴影的位置。允许负值。 测试
+            blur 可选。模糊距离。 测试
+            spread 可选。阴影的尺寸。 测试
+            color 可选。阴影的颜色。请参阅 CSS 颜色值。 测试
+            inset 可选。将外部阴影 (outset) 改为内部阴影。 */
+        }
+
+        /* .container::after {
+            content: "fsfsf";
+            position: relative;
+            /* top: 33px; */
+        /* box-shadow: 1px 15px rgb(183, 122, 122); */
+        /* }  */
+
+        .box {
+            background-color: coral;
+            width: 21vw;
+            height: 51vh;
+            line-height: 2em;
+            display: flex;
+            align-items: center;
+        }
+
+        .boxSm {
+            width: 488px;
+            height: 299px;
+            background-color: floralwhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <span>
+                this is box,for test border-shadow
+            </span>
+            <div class="boxSm">
+                this is box,for test border-shadow
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: flex;
+            /* flex-direction: column-reverse; */
+            width: 15em;
+            height: 25em;
+
+            background-color: lightskyblue;
+            color: black;
+
+            font-size: large;
+            line-height: 70px;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+
+        .red{
+            height: 5rem;
+            width: 10rem;
+        }
+        .blue{
+            height: 6rem;
+            width: 10rem;
+        }
+        .orange {
+            height: 7rem;
+            width: 10rem;
+
+        }
+
+        .red {
+            background-color: crimson;
+        }
+
+        .blue {
+            background-color: dodgerblue;
+        }
+
+        .orange {
+            background-color: darkorange;
+        }
+
+        .start {
+          align-items: flex-start;
+        }
+
+        .end {
+            align-items: flex-end;
+        }
+
+        .center {
+            align-items: center;
+        }
+
+        .baseline {
+            align-items: baseline;
+        }
+
+        .strech {
+            align-items: stretch;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>start</h3>
+    <div class="wrapper flow1 start">
+        <div class="red ">1</div>
+        <div class="blue ">2</div>
+        <div class="orange ">3</div>
+    </div>
+
+    <h3>end</h3>
+    <div class="wrapper flow2 end">
+        <div class="red">1</div>
+        <div class="blue">2</div>
+        <div class="orange">3</div>
+    </div>
+    <h3>center</h3>
+    <div class="wrapper flow2 center">
+        <div class="red">1</div>
+        <div class="blue">2</div>
+        <div class="orange">3</div>
+    </div>
+
+    <h3>baseline</h3>
+    <div class="wrapper flow2 baseline">
+        <div class="red">1</div>
+        <div class="blue">2</div>
+        <div class="orange">3</div>
+    </div>
+    <h3>strech</h3>
+    <div class="wrapper flow2 strech">
+        <div class="red">1</div>
+        <div class="blue">2</div>
+        <div class="orange">3</div>
+    </div>
+</body>
+
+</html>

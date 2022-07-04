@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrapper {
+            display: flex;
+            /* flex-direction: column-reverse; */
+            width: 400px;
+            height: 140px;
+            color: black;
+            font-size: large;
+            line-height: 70px;
+            text-align: center;
+        }
+
+        .flow1 {
+            flex-flow:  wrap-reverse column;
+        }
+
+        .wrap2 {
+            flex-flow: row wrap;
+
+        }
+
+        .wrap3 {
+            flex-flow: nowrap column;
+        }
+
+        .red {
+            width: 50%;
+            height: 50%;
+            background-color: crimson;
+        }
+
+        .blue {
+            width: 50%;
+            height: 50%;
+            background-color: dodgerblue;
+        }
+
+        .orange {
+            height: 50%;
+            width: 50%;
+            background-color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>wrap</h3>
+    <div class="wrapper flow1">
+
+        <div class="red">1</div>
+        <div class="blue">2</div>
+        <div class="orange">3</div>
+    </div>
+    <h3>nowrap</h3>
+    <div class="wrapper wrap2">
+
+        <div class="red">1</div>
+        <div class="blue">2</div>
+        <div class="orange">3</div>
+    </div>
+    <h3>NOwrap-column</h3>
+    <div class="wrapper wrap3">
+
+        <div class="red">1</div>
+        <div class="blue">2</div>
+        <div class="orange">3</div>
+    </div>
+</body>
+
+</html>

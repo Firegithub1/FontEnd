@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            height: 300px;
+
+            display: flex;
+
+            background-color: tan;
+        }
+
+        .box1,
+        .box3 {
+            width: 100px;
+            height: 50px;
+            flex-wrap: wrap;
+            /* 隐藏超出div */
+            overflow: hidden;
+            /* 文字超出div width 换行 */
+            word-break: break-all;
+            background-color: steelblue;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .box2 {
+            flex: 1;
+            height: 50px;
+            background-color: rgb(91, 219, 219);
+            /* overflow: hidden; */
+        }
+    </style>
+</head>
+<!-- 两边边框放在前面 脱离普通文档流 -->
+
+<body>
+    <div id="container">
+        <div class="box1 left">
+            <span>CSS的学习，就我个人看来，是有别于JavaScript这张传统程序语言的学习的。本身属性就多，值也多，不同属性在一起表现也不一样，不同属性和不同类型的HTML标签在一起又不一样，再加上兼容性差异和未定义行为。就像是很多个不确定因素，有着无穷多的组合和可能性。掌握这些不确定性，看书是绝对不够的，一定是要多多实践，多多思考，多多积累。对于底层机理的理解，也是需要一定的天赋的。</span>
+        </div>
+        <div class="box2"></div>
+        <div class="box3 right"></div>
+    </div>
+
+</body>
+
+</html>

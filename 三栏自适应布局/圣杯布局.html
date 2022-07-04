@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            /* height: 300px; */
+            background-color: tan;
+            padding-left: 100px;
+            padding-right: 100px;
+            overflow: hidden;
+        }
+
+        .box1,
+        .box3 {
+            width: 100px;
+            height: 50px;
+            float: left;
+        }
+
+        .left {
+
+            position: relative;
+            left: -100px;
+            margin-left: -100%;
+            background-color: steelblue;
+        }
+
+        .right {
+
+            position: relative;
+
+            /* margin-right: -100px; */
+            margin-right: -100%;
+            background-color: skyblue;
+        }
+
+        .center {
+            height: 50px;
+            width: 100%;
+
+            float: left;
+            background-color: rgb(91, 219, 219);
+
+            overflow: hidden;
+        }
+
+        .header {
+            height: 150px;
+            background-color: wheat;
+        }
+
+        .footer {
+            height: 150px;
+            background-color: beige;
+            /* clear: both; */
+            /* clear float */
+        }
+    </style>
+</head>
+<!-- 两边边框放在前面 脱离普通文档流 -->
+<!-- 圣杯布局就是将基本布局之后使用向左浮动，middle栏留出两边位置
+    ，然后使用相对定位将左右两栏通过margin-left定位到相应位置 -->
+
+<body>
+    <div class="header">header</div>
+    <div id="container">
+        <div class="center">center</div>
+        <div class="box1 left">left</div>
+        <div class="box3 right">right</div>
+    </div>
+    <div class="footer">footer</div>
+
+    </div>
+</body>
+
+</html>

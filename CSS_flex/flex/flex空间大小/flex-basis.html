@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #wrapper {
+            display: flex;
+            width: 200px;
+            height: 150px;
+        }
+
+        #box1,
+        #box2,
+        #box3 {
+            flex-basis: 100px;
+        }
+
+        /* 等价于width就可以了。
+只不过呢，在使用弹性布局时，虽然flex-basis和width都可以用来设置子元素的宽度，
+但是我们应该使用flex-basis而不是width，这也是为了更好的语义化。 */
+        #box1 {
+            background: red;
+            flex-shrink: 0;
+        }
+
+        #box2 {
+            background: blue;
+            flex-shrink: 1;
+        }
+
+        #box3 {
+            background: orange;
+            flex-shrink: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+</body>
+
+</html>
