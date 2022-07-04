@@ -1,0 +1,31 @@
+<!--
+ * @Author: YiFreerFiY
+ * @Date: 2022-02-25 09:38:33
+ *
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>JS全局变量</h2>
+    <p id="demo">使用关键字var声明的全局作用域变量属于window对象</p>
+    <p>变量提升指的是使用<strong>var</strong>关键字可以先使用，后声明，不过未初始化的将显示undefine</p>
+    <script>
+        var declaration = "windows对象";
+        change();
+
+        function change() {
+            document.getElementById("demo").innerHTML = "I can display" + window.declaration;
+        }
+    </script>
+</body>
+
+</html>

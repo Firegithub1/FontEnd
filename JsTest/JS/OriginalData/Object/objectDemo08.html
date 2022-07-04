@@ -1,0 +1,55 @@
+<!--
+ * @Author: YiFreerFiY
+ * @Date: 2022-03-13 21:30:00
+ * @Description:
+ *
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //构造函数
+        function Calculator() {
+            this.read = function () {
+                this.a = +prompt("a?", 0);
+                this.b = +prompt("b?", 0);
+            };
+
+            this.sum = () => {
+                return this.a + this.b;
+            };
+            this.mul = () => {
+                return this.a * this.b;
+
+            };
+        }
+        let calculator = new Calculator();
+        // calculator.read();
+        // document.writeln(calculator.mul());
+        // 创建 new Accumulator
+        function Accumulator(startingValue) {
+            // 测式是否可以重命名
+            this.value = startingValue;
+
+            this.read = function () {
+                this.value += +prompt("value", 0);
+            }
+        }
+        let accumulator = new Accumulator(1); // 初始值 1
+
+        accumulator.read(); // 添加用户输入的 value
+        document.writeln(accumulator.value);
+        // accumulator.read();
+        // document.writeln(accumulator.read());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!--
+ * @Author: YiFreerFiY
+ * @Date: 2022-03-14 11:55:01
+ * @Description:
+ *
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let ladder = {
+            step: 0,
+            up() {
+                this.step++;
+                return this;
+            },
+            down() {
+                this.step--;
+                return this;
+            },
+            showStep() {
+                document.writeln(this.step);
+                return this;
+            }
+        }
+        ladder.up();
+        ladder.up();
+        ladder.up();
+        ladder.showStep();
+        ladder.up().down().up();
+        ladder.showStep(); // document.writeln(calculator.sum());
+
+        function BigUser() {
+
+            this.name = "John";
+
+            return {
+                name: "Godzilla"
+            }; // <-- 返回这个对象 } alert( new BigUser().name );
+        }
+        document.writeln(BigUser().name);
+    </script>
+</body>
+
+</html>

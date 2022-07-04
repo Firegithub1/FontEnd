@@ -1,0 +1,16 @@
+global
+1,2,3,4,5
+
+promise1
+promise2
+ (then1)
+ (then2)
+6
+ 1s timeout2 timeout2_promise
+(then2)
+2s timeout1 timeout1_promise
+(timethen1)
+6
+1s 6
+2s 6
+5s 6

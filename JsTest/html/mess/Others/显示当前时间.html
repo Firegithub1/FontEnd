@@ -1,0 +1,56 @@
+<!--
+ * @Author: YiFreerFiY
+ * @Date: 2021-10-22 16:44:07
+ * @LastEditors: YiFreerFiY
+ * @LastEditTime: 2022-03-01 15:20:03
+ * @FilePath: \JsTest\html\mess\显示当前时间.html
+ * @Description:
+ *
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程</title>
+    <script type="text/javascript">
+        function myfunction() {
+            document.getElementById("demo1").innerHTML = "onclick ctrl + table0";
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id>一个段落</h1>
+    <button id="demo1" type="button" onclick="myfunction()">ctrl + table</button>
+    <p id="txt">show Time</p>
+    <script>
+        startTime = () => {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            // 在number《10前加上0
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById("txt")
+                .innerHTML = h +
+                ":" +
+                m + ":" +
+                s;
+            t = setTimeout(function() {
+                startTime()
+
+            }, 500);
+        }
+        checkTime = (i) => {
+            if (i < 10)
+                i = "0" + i;
+            return i;
+        }
+        startTime();
+    </script>
+</body>
+
+</html>

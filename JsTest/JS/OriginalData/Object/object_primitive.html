@@ -1,0 +1,71 @@
+<!--
+ * @Author: YiFreerFiY
+ * @Date: 2022-03-16 08:10:40
+ * @Description:
+ *
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object_original value transition</title>
+</head>
+
+<body>
+
+    <script>
+        //toPrimitive()
+        let user = {
+            name: "John",
+            money: 1000,
+            [Symbol.toPrimitive](hint) {
+                document.writeln(`hint:${hint}`);
+                return hint == "string" ? `name:${this.name}` : this.money;
+            }
+        }
+        document.writeln(user+"<br>");
+        document.writeln(+user);
+        document.writeln(user + 500);
+
+        document.writeln("<br>");
+        //toString() valueOf()
+        let user01 = {
+            name: "John",
+            money: 1000,
+
+        }
+        document.writeln(user01);
+        document.writeln(user01.valueOf() == user01);
+
+        document.writeln("<br>");
+        //默认情况下使用 toString()
+        let user02 = {
+            name: "John",
+            money: 1000,
+
+            toString() {
+                return this.name;
+            },
+            valueOf() {
+                return this.money;
+            }
+        }
+        document.writeln(user02);
+        document.writeln(+user02);
+        document.writeln(user02 + 200);
+
+        document.writeln("<br>");
+    </script>
+</body>
+
+</html>
+<!-- <script>
+        var array = [
+            [0, 3, 24, 2],
+            ["22a", "8829f", "77rw", "23dw", "fqqr", ]
+        ];
+        document.writeln(array[1][0]);
+    </script> -->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        /*识别CSS注释*/
+        
+        body {
+            color: red;
+        }
+    </style>
+    <script type="text/javascript">
+        //js注释
+        document.write("学而时习之，不亦说乎")
+        var a, b, c;
+        a = "22";
+        b = 22;
+        c = a + b;
+        document.write("<br>" + c);
+
+        var x = 3.1415;
+        if (parseInt(x.toString()) == parseFloat(x.toString())) {
+            document.write("<br>" + "这是一个整数");
+
+        } else {
+            document.write("<br>" + "这是一个小数");
+        }
+
+        var Narcissistic = "";
+        for (var i = 100; i < 1000; i++) {
+            var a = i / 100;
+            a = parseInt(a);
+            var b = (i / 10) % 10;
+            b = parseInt(b);
+            var c = i % 10;
+            c = parseInt(c);
+            if (i == (a * a * a + b * b * b + c * c * c)) {
+                Narcissistic = Narcissistic + i + "、";
+            }
+        }
+        document.write("<br>" + "The Narcissistic:" + Narcissistic);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

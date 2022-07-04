@@ -1,0 +1,70 @@
+<!--
+ * @Author: YiFreerFiY
+ * @Date: 2022-03-11 16:39:27
+ * @Description:
+ *
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = {
+            name: "zhangsan",
+            age: 223,
+            isAdmin: true,
+        };
+        document.write("<br>");
+        for (let t in user) {
+
+            document.writeln(t);
+            document.writeln(user[t]);
+            document.write("<br>");
+        }
+
+
+        document.writeln(user.age);
+        document.writeln(user.isAdmin);
+        delete user.isAdmin;
+        user.sex = "male";
+        document.writeln(user.sex);
+        var project = "project";
+        var SoftwareEngineer = "SoftwareEngineer";
+
+        user[project] = SoftwareEngineer;
+        document.writeln(user.project);
+
+
+        let fruit = 13;
+
+        let bag = {
+            fruit: 5,
+            // 属性名是从 fruit 变量中得到的
+        };
+        bag[fruit] = fruit;
+
+        document.writeln("<br>" + "woshi fruit" + bag[fruit]);
+        let obj = {
+            0: "test" // 等同于 "0": "test"
+        };
+
+        // 都会输出相同的属性（数字 0 被转为字符串 "0"）
+        document.writeln(obj[0]); // test
+
+        let user2 = {
+            age: 30
+        };
+
+        let key = "age";
+        console.log(key in user2);
+    </script>
+</body>
+
+</html>

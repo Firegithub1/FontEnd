@@ -1,0 +1,45 @@
+<!--
+ * @Author: YiFreerFiY
+ * @Date: 2022-03-11 21:19:55
+ * @Description:
+ *
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130
+        };
+
+        function addition(obj) {
+            let count = 0;
+            for (const key in obj) {
+                count += obj[key];
+            }
+            return count;
+        }
+        document.writeln(addition(salaries));
+
+        function multiplyNumber(object) {
+            for (const key in object) {
+                if (typeof object[key] == "number")
+                    object[key] *= 2;
+            }
+        }
+        multiplyNumber(salaries);
+        document.writeln(salaries.John);
+    </script>
+</body>
+
+</html>

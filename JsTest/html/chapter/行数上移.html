@@ -1,0 +1,36 @@
+<!--
+ * @Author: YiFreerFiY
+ * @Date: 2022-02-01 21:15:28
+ * @Description:
+ *-->
+<!DOCTYPE html>
+<html lang="ZH-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li>123456789</li>
+        <li>23456789</li>
+        <li>3456789</li>
+    </ul>
+    <p id="demo">这是一个测式数据</p>
+    <button onclick="move()">移动</button>
+</body>
+<script>
+    function move() {
+        const list = document.getElementById('list')
+
+        list.appendChild(list.getElementsByTagName('li')[0])
+
+
+
+    };
+</script>
+
+</html>

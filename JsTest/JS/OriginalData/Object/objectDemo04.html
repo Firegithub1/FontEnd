@@ -1,0 +1,57 @@
+<!--
+ * @Author: YiFreerFiY
+ * @Date: 2022-03-12 08:46:20
+ * @Description:
+ *
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = {
+            name: "John"
+        };
+        let admin = user;
+        document.writeln(user.name);
+        admin.name = "Jooooohn"
+        document.writeln(admin.name);
+
+        document.writeln(user.name);
+
+        let a = {};
+        let b = {};
+        document.writeln(a == b);
+        // 克隆与合并
+        let user2 = {};
+        for (const key in user) {
+            user2[key] = user[key];
+        }
+        user2.name = "Hiiiilin";
+        document.writeln(user2.name);
+        document.writeln(user.name);
+
+        // Object.assign方式拷贝
+        let clone = {};
+        Object.assign(clone, user, user2);
+
+
+        for (const key in clone) {
+            document.writeln("<br>" + key);
+            document.writeln(clone[key]);
+        }
+        for (const key in object) {
+            if (typeof object[key] == "number")
+                object[key] *= 2;
+        }
+    </script>
+</body>
+
+</html>

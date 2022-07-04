@@ -1,0 +1,53 @@
+<!--
+ * @Author: YiFreerFiY
+ * @Date: 2022-03-16 16:47:22
+ * @Description:
+ *
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">11
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //嵌入对象（值是函数/箭头函数）
+        function user() {
+            this.name = "John",
+                // Hi : function (){}
+                this.Hi = () => {
+                    document.writeln(this.name);
+                    1
+                }
+        }
+
+        let user01 = new user();
+        user01.Hi()
+        // document.writeln(user01.name);
+
+        let x = 3.14159265;
+        document.writeln(x.toFixed(3));
+        document.writeln(String(x) + "<br>");
+
+        let happy = {
+            source: "you",
+
+        }
+        //不带括号
+        happy.happyYou = Hi;
+        //函数
+        // happy.happyYou = function Hi(){};
+
+        function Hi() {
+            document.writeln("because of you");
+        }
+        happy.happyYou();
+    </script>
+</body>
+
+</html>

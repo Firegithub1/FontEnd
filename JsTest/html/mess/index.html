@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			function alertMes() {
+				alert("绿叶学习网，Javascript");
+				
+			}
+			document.write("Javascript,初恋的感觉") ;
+			// window.onload=function(){
+			// 	alert("欢迎光临一路顺风驿站！");
+			// }
+			window.onbeforeunload=function(event){
+				var e = event||window.event;
+				e.returnValue="下次一定！"
+			}
+			
+			var a =10+5, b = "从0到1"+"系列图书",c = "今年是"+2021;
+			document.write(a+"<br/>"+b+"<br/>"+c);
+			
+			var a = 10,b=5,n1 = (a>b), n2 = (a==b);
+			document.write("<br>"+"10>5" + n1+"<br />");
+			
+		</script>
+		
+	</head>
+	<body>
+		<p></p>
+		<input type="button" name="" id="" value="按钮" onclick="alert('good good study day day up')" />
+		<input type="button" name="" id="" value="按钮" onclick="alertMes()" />
+	</body>
+</html>

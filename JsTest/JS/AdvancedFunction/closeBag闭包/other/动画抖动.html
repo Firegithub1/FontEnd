@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .move {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="move"> first</button>
+    <button class="move"> second</button>
+</body>
+<!-- <script>
+    let btn = document.querySelectorAll("button");
+    btn.forEach((item) => {
+        let left = 1;
+        item.addEventListener("click", function() {
+            setInterval(function() {
+                item.style.left = left++ + "px";
+            }, 100)
+
+        })
+    })
+</script> -->
+<script>
+    let btn = document.querySelectorAll("button");
+    btn.forEach((item) => {
+        let bind = false;
+        item.addEventListener("click", function() {
+            if (!bind) {
+                let left = 1;
+                bind = setInterval(function() {
+                    item.style.left = left++ + "px";
+                }, 100)
+            }
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>搜索字符串 "runoob", 并显示匹配的起始位置 </p>
+    <button onclick="reg()">点我</button>
+    <p id="demo"></p>
+</body>
+<script>
+    reg = () => {
+        let str = 'sjflsa   runnob';
+        let reg = document.getElementById("demo");
+        let n = str.search(/runnob/i);
+        // let judge = str.test(/runnob/i);
+        // console.log(judge);
+        reg.innerHTML=n;
+    }
+</script>
+
+</html>

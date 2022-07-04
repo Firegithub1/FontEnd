@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>transform属性</title>
+</head>
+<style type="text/css">
+    .oneX {
+        border: 2px crimson solid;
+        background-color: chartreuse;
+        width: 100px;
+        height: 100px;
+        transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+    }
+    
+    .oneY {
+        border: 2px crimson dashed;
+        background-color: chartreuse;
+        width: 100px;
+        height: 100px;
+        transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+    }
+    
+    .one {
+        border: 2px crimson dashed;
+        background-color: chartreuse;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .oneO {
+        border: 2px crimson dashed;
+        background-color: chartreuse;
+        width: 100px;
+        height: 100px;
+        margin: 150px;
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        -webkit-transform-style: preserve-3d;
+    }
+    
+    .one3D {
+        border: 2px crimson dashed;
+        background-color: chartreuse;
+        width: 100px;
+        height: 100px;
+        margin: 150px;
+        transform-origin: 50% 50% 75px;
+        -webkit-transform-origin: 50% 50% 75px;
+        -ms-transform-origin: 50% 50% 75px;
+        -moz-transform-origin: 50% 50% 75px;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        box-shadow: 10px 10px 5px #888888;
+    }
+    
+    .one2D {
+        border: 2px crimson dashed;
+        background-color: chartreuse;
+        width: 100px;
+        height: 100px;
+        margin: 150px;
+        transform-origin: 50% 50% 75px;
+        -webkit-transform-origin: 50% 50% 75px;
+        -ms-transform-origin: 50% 50% 75px;
+        -moz-transform-origin: 50% 50% 75px;
+        -webkit-transform-style: flat;
+        transform-style: flat;
+        -moz-transform-style: flat;
+        -ms-transform-style: flat;
+        box-shadow: 10px 10px 5px #888888;
+    }
+</style>
+
+<body>
+    <p>只有在transform属性存在情况下transform-style和transform-origin才会有效果。</p>
+    <p>transform属性介绍：</p>
+    <table>
+
+        <tbody>
+            <tr>
+                <th style="width:25%">值</th>
+                <th>描述</th>
+
+            </tr>
+
+            <tr>
+                <td>none</td>
+                <td>定义不进行转换。</td>
+
+            </tr>
+
+            <tr>
+                <td>matrix(<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>)</td>
+                <td>定义 2D 转换，使用六个值的矩阵。</td>
+
+            </tr>
+
+            <tr>
+                <td>matrix3d(<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>,<i>n</i>)</td>
+                <td>定义 3D 转换，使用 16 个值的 4x4 矩阵。</td>
+
+            </tr>
+
+            <tr>
+                <td>translate(<i>x</i>,<i>y</i>)</td>
+                <td>定义 2D 转换。</td>
+
+            </tr>
+
+            <tr>
+                <td>translate3d(<i>x</i>,<i>y</i>,<i>z</i>)</td>
+                <td>定义 3D 转换。</td>
+
+            </tr>
+
+            <tr>
+                <td>translateX(<i>x</i>)</td>
+                <td>定义转换，只是用 X 轴的值。</td>
+
+            </tr>
+
+            <tr>
+                <td>translateY(<i>y</i>)</td>
+                <td>定义转换，只是用 Y 轴的值。</td>
+
+            </tr>
+
+            <tr>
+                <td>translateZ(<i>z</i>)</td>
+                <td>定义 3D 转换，只是用 Z 轴的值。</td>
+
+            </tr>
+
+            <tr>
+                <td>scale(<i>x</i>[,<i>y</i>]?) </td>
+                <td>定义 2D 缩放转换。</td>
+
+            </tr>
+
+            <tr>
+                <td>scale3d(<i>x</i>,<i>y</i>,<i>z</i>)</td>
+                <td>定义 3D 缩放转换。</td>
+
+            </tr>
+
+            <tr>
+                <td>scaleX(<i>x</i>)</td>
+                <td>通过设置 X 轴的值来定义缩放转换。</td>
+
+            </tr>
+
+            <tr>
+                <td>scaleY(<i>y</i>)</td>
+                <td>通过设置 Y 轴的值来定义缩放转换。</td>
+
+            </tr>
+
+            <tr>
+                <td>scaleZ(<i>z</i>)</td>
+                <td>通过设置 Z 轴的值来定义 3D 缩放转换。</td>
+
+            </tr>
+
+            <tr>
+                <td>rotate(<i>angle</i>)</td>
+                <td>定义 2D 旋转，在参数中规定角度。</td>
+
+            </tr>
+
+            <tr>
+                <td>rotate3d(<i>x</i>,<i>y</i>,<i>z</i>,<i>angle</i>)</td>
+                <td>定义 3D 旋转。</td>
+
+            </tr>
+
+            <tr>
+                <td>rotateX(<i>angle</i>)</td>
+                <td>定义沿着 X 轴的 3D 旋转。</td>
+
+            </tr>
+
+            <tr>
+                <td>rotateY(<i>angle</i>)</td>
+                <td>定义沿着 Y 轴的 3D 旋转。</td>
+
+            </tr>
+
+            <tr>
+                <td>rotateZ(<i>angle</i>)</td>
+                <td>定义沿着 Z 轴的 3D 旋转。</td>
+
+            </tr>
+
+            <tr>
+                <td>skew(<i>x-angle</i>,<i>y-angle</i>)</td>
+                <td>定义沿着 X 和 Y 轴的 2D 倾斜转换。</td>
+
+            </tr>
+
+            <tr>
+                <td>skewX(<i>angle</i>)</td>
+                <td>定义沿着 X 轴的 2D 倾斜转换。</td>
+
+            </tr>
+
+            <tr>
+                <td>skewY(<i>angle</i>)</td>
+                <td>定义沿着 Y 轴的 2D 倾斜转换。</td>
+
+            </tr>
+
+            <tr>
+                <td>perspective(<i>n</i>)</td>
+                <td>为 3D 转换元素定义透视视图。</td>
+
+            </tr>
+        </tbody>
+    </table>
+    <p>实例:</p>
+    <p>X轴旋转：</p>
+    <div class="oneX"></div>
+    <p>Y轴旋转：</p>
+    <div class="oneY"></div>
+    <p>平面旋转：</p>
+    <div class="one"></div>
+    <p>transform-origin定位旋转的锚点：就是设置图形按照哪一个点旋转。举例：把一张白纸使用冒顶钉在墙上，转动白纸，白纸围绕钉子转，钉子的位置就是锚点。</p>
+    <table class="reference">
+
+        <tbody>
+            <tr>
+                <th style="width:25%">值</th>
+                <th>描述</th>
+            </tr>
+
+            <tr>
+                <td>x-axis</td>
+                <td>
+                    <p>定义视图被置于 X 轴的何处。可能的值：</p>
+                    <ul class="listintable">
+                        <li>left</li>
+                        <li>center</li>
+                        <li>right</li>
+                        <li><i>length</i></li>
+                        <li><i>%</i></li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td>y-axis</td>
+                <td>
+                    <p>定义视图被置于 Y 轴的何处。可能的值：</p>
+                    <ul class="listintable">
+                        <li>top</li>
+                        <li>center</li>
+                        <li>bottom</li>
+                        <li><i>length</i></li>
+                        <li><i>%</i></li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td>z-axis</td>
+                <td>
+                    <p>定义视图被置于 Z 轴的何处。可能的值：</p>
+                    <ul class="listintable">
+                        <li><i>length</i></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="oneO"></div>
+    <p>transform-style设置旋转模式为2D还是3D。3d效果必须采用transform支持3d的方法，否则将会是2D效果。</p>
+    <table>
+
+        <tbody>
+            <tr>
+                <th style="width:25%">值</th>
+                <th>描述</th>
+            </tr>
+
+            <tr>
+                <td>flat</td>
+                <td>表示所有子元素在2D平面呈现。</td>
+            </tr>
+
+            <tr>
+                <td>preserve-3d</td>
+                <td>表示所有子元素在3D空间中呈现。</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="one3D">3D</div>
+    <div class="one2D">2D</div>
+</body>
+<script type="text/javascript">
+    var divX = document.getElementsByClassName("oneX")[0];
+    var divY = document.getElementsByClassName("oneY")[0];
+    var div = document.getElementsByClassName("one")[0];
+    var divO = document.getElementsByClassName("oneO")[0];
+    var div3D = document.getElementsByClassName("one3D")[0];
+    var div2D = document.getElementsByClassName("one2D")[0];
+    var i = 0;
+    setInterval(function() {
+        i += 5;
+        divX.style.transform = "rotateX(" + i + "deg)";
+        divY.style.transform = "rotateY(" + i + "deg)";
+        div.style.transform = "rotate(" + i + "deg)";
+        divO.style.transform = "rotate(" + i + "deg)";
+        div3D.style.transform = "rotate3d(75,75,75," + i + "deg)";
+        div2D.style.transform = "rotate(" + i + "deg)";
+        if (i == 720) {
+            i = 0;
+        }
+        /*transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);*/
+
+    }, 100);
+</script>
+
+</html>

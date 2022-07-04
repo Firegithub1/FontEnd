@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+
+
+            $("p").click(function () {
+                $(this).hide();
+            });
+            if ($("p").parent().is("div")) {
+                alert("p 的父元素是 div");
+            }
+            let big = $("div")[0];
+            let sm = $("p")[0];
+            if ($.contains(big, sm))
+                document.write("container");
+
+                let person = {
+                    name:"Alice",
+                    age:19
+                };
+                let str = $.param(person);
+                document.write(str+"\n");
+                document.write(JSON.parse(str));
+
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <p>如果你点我，我就会消失。</p>
+        <p>继续点我!</p>
+        <p>接着点我!</p>
+    </div>
+
+    <div>
+        <input type="range">
+    </div>
+</body>
+
+</html>

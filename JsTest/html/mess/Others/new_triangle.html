@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        #blue {
+            width: 0;
+            height: 0;
+            position: relative;
+            border-style: solid;
+            border-width: 0 50px 50px;
+            border-color: transparent transparent #00BFFF;
+        }
+        
+        #blue::after {
+            content: "";
+            position: absolute;
+            /* top: 0; */
+            /* left: 0; */
+            left: -40px;
+            top: 5px;
+            border-width: 0 40px 40px;
+            border-style: solid;
+            border-color: transparent transparent yellow;
+        }
+        
+        #green {
+            display: flex;
+            content: "";
+            position: absolute;
+            /* border: 0 40px 40px solid transparent transparent green; */
+            border-width: 40px;
+            border-color: transparent transparent transparent greenyellow;
+            border-style: solid;
+        }
+        
+        #green::after {
+            content: "";
+            position: absolute;
+            border-style: solid;
+            border-color: transparent transparent transparent white;
+            border-width: 30px;
+            left: -40px;
+            top: -30px;
+        }
+        
+        #red {
+            /* float: right; */
+            position: relative;
+            border: 33px solid red;
+            content: "";
+            width: 25px;
+            height: 55px;
+            /*  border-width: 33px;  border-style: solid; */
+            border-color: red transparent;
+            /* display: flex; */
+            /* margin: 10px; */
+            /* padding: 20px; */
+        }
+        
+        #cycle {
+            content: "jsfkafjlaf";
+            position: fixed;
+            /* top: 50px;
+            left: 50px; */
+            bottom: 15px;
+            right: 15px;
+            border: 30px solid gold;
+            border-radius: 50%;
+        }
+        
+        #eye1 {
+            border: 15px black solid;
+            border-radius: 65% 15%;
+            transform: rotate(-45deg);
+            transform: scale(0.5);
+        }
+        
+        p:last-child {
+            background: #ff0000;
+        }
+        
+        .triangle1 {
+            content: "";
+            width: 0;
+            height: 0;
+            /* background-color: violet; */
+            /* border: solid 5px; */
+            border-width: 0 64px 32px 0;
+            border-style: solid;
+            border-color: transparent transparent gold;
+            /* border-right: #00BFFF solid 32px;
+            border-left: #ff0000 solid 32px;
+            border-left: transparent;
+            border-bottom: #00BFFF solid 32px; */
+        }
+        
+        .triangle2 {
+            content: "";
+            width: 0;
+            border-style: double;
+            border-color: transparent greenyellow gold;
+            border-width: 32px;
+            /* 0 64px 32px 0 */
+        }
+        
+        .triangle3 {
+            content: "";
+            width: 0;
+            height: 0;
+            position: relative;
+            border-style: solid;
+            border-color: greenyellow gold;
+            border-width: 32px;
+            /* 0 64px 32px 0 */
+        }
+        
+        .triangle3::after {
+            content: "";
+            width: 0;
+            height: 0;
+            top: -32px;
+            left: -32px;
+            position: absolute;
+            border-style: dotted;
+            border-color: rgb(215, 226, 59) #e933e9 hsl(51, 84%, 51%) paleturquoise;
+            border-width: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>这里是利用了设置内容为空<br>&nbsp;Transparent空边<br>&nbsp;&nbsp;absolute绝对定位</p>
+    <div id="blue">
+    </div>
+    <hr> <br>
+    <div id="green">
+
+    </div>
+    <hr> <br>
+    <div id="red">
+
+    </div>
+    <div id="cycle">
+        <button onclick="fu()" style="height: 50px; border-radius: 50%; width: 50px	;"></button>
+    </div>
+    <div id="eye1">
+
+    </div>
+    <div>
+        <p>this is test last-child example</p>
+        <p>this is test last-child example</p>
+        <p>this is test last-child example</p>
+    </div>
+
+
+    <div class="triangle1"> </div>
+    <br>
+    <div class="triangle2"> </div>
+    <br>
+    <div>
+        <div class="triangle3"> </div>
+    </div>
+    <script>
+        function fu() {
+            alert("jasf!");
+        }
+    </script>
+</body>
+
+</html>

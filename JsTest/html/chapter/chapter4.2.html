@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>return function</title>
+	<script type="text/javascript">
+		var i=1;
+		var p=1;
+		for(i;i<=4;i++)
+		{
+			
+			for(var j=4;j>i;j--)
+			{
+				document.write("-");
+			}
+			for(var t=1;t<=2*i-1;t++){
+				document.write("*");
+			}
+			document.write("<br />");
+		}
+		for(p;p<=3;p++)
+		{
+			for(var j=1;j<=p;j++)
+			{
+				document.write("-");	
+			}
+			// 7-2*p
+			for(var t=1;t<=2*(4-p)-1;t++)
+			{
+				document.write("*");
+			}
+			document.write("<br />");
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+
+//注意计算机数组从零开始  0 1 2 3  // 1 2 3 4
+
+ 
+<!--    实现代码如下：
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        /*
+          i表示行数，0表示第1行。打一行，i就加1
+          j表示某一行需要打印空格的数目
+          k表示某一行需要打印“*”的数目
+        */
+        var i, j, k;
+        //先打印上面4行
+        for (i = 0; i < 4; i++) {
+            //打印“-”
+            for(j=0;j<3-i;j++)
+            {
+                document.write("-");
+            }
+            //打印“*”
+            for (k = 0; k < 2 * i + 1; k++)
+            {
+                document.write("*")
+            }
+            //换行
+            document.write("<br/>")
+        }
+        //后打印下面3行
+        for (i = 0; i < 3; i++)
+        {
+            //打印“-”
+            for (j = 0; j < i + 1; j++)
+            {
+                document.write("-");
+            }
+            //打印“*”
+            for (k = 0; k < 5 - 2 * i; k++)
+            {
+                document.write("*")
+            }
+            //换行
+            document.write("<br/>")
+        }
+    </script>
+</head>
+<body>
+ -->

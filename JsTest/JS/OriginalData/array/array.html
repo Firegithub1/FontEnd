@@ -1,0 +1,61 @@
+<!--
+ * @Author: YiFreerFiY
+ * @Date: 2022-03-21 21:50:23
+ * @Description:
+ *
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    </script>
+</head>
+
+<body>
+    <script>
+        // function sumInput() {
+        //     let str = [];
+        //     let count = 0;
+        //     while (true) {
+        //         console.log("str.length:" + str.length);
+        //         let value = prompt("please input number:", 0);
+
+        //         // if (value === " " || value === null || !isFinite(value)) break;
+        //         if (value === "" || value === null || !isFinite(value)) break;
+
+        //         str.push(+value);
+        //     }
+        //     for (const num of str) {
+        //         count += num;
+        //     }
+        //     // console.log(count);
+        //     return count;
+
+        // }
+        let t = Number('3');
+        console.log(t);
+
+        function sumInput() {
+            let value;
+            let count = 0;
+            while (true) {
+                value = prompt("please inPut number:", 0);
+                if (value === " " || value === null || !isFinite(value)) {
+                    break;
+                }
+                value = Number(value);
+                console.log(value);
+                count += value;
+            }
+            return count;
+        }
+        console.log(sumInput());
+    </script>
+</body>
+
+</html>

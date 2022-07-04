@@ -1,0 +1,95 @@
+<!--
+ * @Author: YiFreerFiY
+ * @Date: 2022-03-16 16:47:22
+ * @Description:
+ *
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        countNumber = (a, b) => {
+            a = parseFloat(a);
+            b = parseFloat(b);
+            return a + b;
+        }
+
+        function countTwo() {
+
+            let n = 0;
+            let a;
+            do {
+                a = prompt("输入两个数字", 0);
+                document.writeln(a);
+            } while (!isFinite(a));
+            if (a === "" || a === ' ') return null;
+
+
+            // do {
+            //     let b = +prompt("输入两个数字", 0);
+            //     document.writeln(b);
+            //     n += b;
+            // } while (!isFinited(b));
+            // document.writeln("n====" + n);
+
+        }
+        // countTwo();
+        document.writeln(countNumber(2, 3));
+        // 构造函数
+        // function test(params) {
+        //     this.p = params;
+        //     this.read = function() {
+        //         document.writeln(this.p);
+        //     }
+        // }
+        // let zz = new test(12);
+        // zz.read();
+
+        document.writeln(1.35.toFixed(2));
+        //the 6.35 is error toFixed
+        document.writeln(6.35.toFixed(1));
+        //true
+        document.writeln(Math.round(6.35 * 10) / 10);
+
+        let i = 0;
+        while (i < 10) {
+            i += 0.2;
+        }
+        document.writeln(i.toFixed(2));
+
+        let ii = Math.random(1).toFixed(1);
+        document.writeln(ii);
+
+        let ii01 = Math.random(5).toFixed(2);
+        document.writeln(ii01);
+
+        //从 min 到 max 的随机数
+        function random(first, second) {
+            return first + Math.random(second);
+        }
+        document.writeln(random(2, 5).toFixed(0));
+
+        //从 min 到 max 的随机   整数
+        function randomInteger(first, second) {
+
+            let n = first + Math.random() * (second - first + 1);
+
+            n = Math.floor(n);
+            return n;
+        }
+        document.writeln(randomInteger(1, 3));
+    </script>
+</body>
+
+</html>
+<!--
+    document.writeln
+ -->
