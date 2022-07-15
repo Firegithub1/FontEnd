@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* 父元素的子元素
+        最后一个元素 */
+      div.one p:last-of-type {
+        background: #ff0000;
+      }
+      /* 未指定父元素
+      全局范围 */
+      span:nth-last-of-type(1) {
+        color: coral;
+      }
+      /* span:last-of-type {
+        color: coral;
+      } */
+
+      /* 等同于 :nth-last-of-type(1)。*/
+    </style>
+  </head>
+
+  <body>
+    <h1>这是标题</h1>
+    <div class="one">
+      <p>this 01</p>
+      <p>this 02</p>
+      <p>this 03</p>
+      <p>this 04</p>
+      <span>last last</span>
+    </div>
+    <hr />
+    <div>
+      <span>test last of type 01</span>
+      <span>test last of type 02</span>
+      <span>test last of type 03</span>
+    </div>
+    <div>
+      <span>test last of type 04</span>
+      <span>test last of type 05</span>
+      <span>test last of type 06</span>
+    </div>
+    <span>test last of type 07</span>
+    <span>test last of type 08</span>
+    <span>test last of type 09</span>
+  </body>
+</html>

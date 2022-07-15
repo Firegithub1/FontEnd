@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .p:nth-child(1) {
+        border: 1px solid red;
+      }
+
+      /* 1.父元素div.third
+      2.倒数第二个元素
+      3.同类 .p
+      满足三个条方可加blue board */
+      /* div.third .p:nth-last-child(2) {
+        border: 1px solid blue;
+      } */
+
+      .p:nth-last-child(1) {
+        border: 1px solid blue;
+      }
+      /* 不满足第三条 */
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="p">这是第一个段落。</p>
+      <p class="p">这是第二个段落。</p>
+      <p class="p">这是第三个段落。</p>
+    </div>
+    <hr />
+    <div>
+      <p>p这是一个干扰段落。</p>
+      <p class="p">这是第一个段落。</p>
+      <p class="p">这是第二个段落。</p>
+      <p class="p">这是第三个段落。</p>
+      <p>这是一个干扰段落。</p>
+    </div>
+    <hr />
+    <div class="third">
+      <div>div这是一个干扰段落。</div>
+      <p class="p">这是第一个段落。</p>
+      <p class="p">这是第二个段落。</p>
+      <p class="p">这是第三个段落。</p>
+      <div>这是一个干扰段落。</div>
+    </div>
+    <!-- 会收到干扰， -->
+  </body>
+</html>

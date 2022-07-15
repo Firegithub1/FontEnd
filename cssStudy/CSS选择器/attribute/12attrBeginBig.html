@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* 匹配属性值
+      以指定值开头的每个元素 */
+      [class^="dem"] {
+        background: coral;
+      }
+      /* 相比|不需要连字符-适用范围更广 */
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <span class="demo">demo1</span>
+      <span class="demo1">demo02</span>
+      <span class="demo-2">demo03</span>
+      <span class="demo$3">demo04</span>
+      <span class="demo#4">demo05</span>
+      <span class="demo_5">demo06</span>
+    </div>
+  </body>
+</html>

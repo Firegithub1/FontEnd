@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      /* p元素的
+      父元素的
+      (第一个)子元素 */
+      div.first p:first-child {
+        border: 1px solid red;
+      }
+
+      /* p元素的
+      父元素  //未指定父元素即所有父元素
+        的(最后一个)子元素 */
+      p:last-child {
+        border: 1px solid blue;
+      }
+
+
+      hr {
+        border: 5px double gainsboro;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="first">
+      <p>这是第一个段落。</p>
+      <p>这是第二个段落。</p>
+      <p>这是第三个段落。</p>
+    </div>
+    <hr />
+    <div>
+      <p>这是第一个段落。</p>
+      <p>这是第二个段落。</p>
+      <p>这是第三个段落。</p>
+    </div>
+  </body>
+</html>

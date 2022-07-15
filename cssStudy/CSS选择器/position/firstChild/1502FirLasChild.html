@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      .p:first-child {
+        border: 1px solid red;
+      }
+      .p:last-child {
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="p">这是第一个段落。</p>
+      <p class="p">这是第二个段落。</p>
+      <p class="p">这是第三个段落。</p>
+    </div>
+    <hr />
+    <div>
+      <p>p这是一个干扰段落。</p>
+      <p class="p">这是第一个段落。</p>
+      <p class="p">这是第二个段落。</p>
+      <p class="p">这是第三个段落。</p>
+      <p>这是一个干扰段落。</p>
+    </div>
+    <hr />
+    <div>
+      <div>div这是一个干扰段落。</div>
+      <p class="p">这是第一个段落。</p>
+      <p class="p">这是第二个段落。</p>
+      <p class="p">这是第三个段落。</p>
+      <div>这是一个干扰段落。</div>
+    </div>
+    <!-- 无法找到，添加干扰段落，已经不是父元素div的首个或尾个p标签 -->
+  </body>
+</html>
