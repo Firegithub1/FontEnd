@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input value="this is test getAttribute" />
+
+    <script>
+      let input = document.querySelector("input");
+
+      // 特性 => 属性
+      input.setAttribute("id", "id");
+      alert(input.id); // id（被更新了）
+
+      // 属性 => 特性
+      input.id = "newId";
+      alert(input.getAttribute("id")); // newId（被更新了）
+      console.log(input.getAttribute("value"));
+
+      // 这个操作无效，属性 => 特性（value只能从特性到属性）
+      input.value = "newValue";
+      alert(input.getAttribute("value")); // text（没有被更新！）
+    </script>
+  </body>
+</html>

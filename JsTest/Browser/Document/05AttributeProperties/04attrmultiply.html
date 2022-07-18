@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="input" type="checkbox" checked /> checkbox
+
+    <div id="div" style="color: blue; font-size: bold">Hello</div>
+
+    <a id="a" href="./01domProper.html">link</a>
+    <script>
+      console.log(input.getAttribute("checked")); // 特性值是：空字符串
+      console.log(input.checked); // 属性值是：true
+
+      console.log(div.style); //style 特性是字符串类型的
+      console.log(div.style.color); //但 style 属性是一个对象：
+
+      // 特性
+      alert(a.getAttribute("href")); // #hello
+
+      // 属性
+      alert(a.href); // http://site.com/page#hello 形式的完整 URL
+    </script>
+  </body>
+</html>

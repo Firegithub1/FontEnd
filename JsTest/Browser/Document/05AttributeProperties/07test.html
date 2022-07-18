@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div data-widget-name="menu">Choose the genre</div>
+    <!-- <a hidden name="list" style="text-transform: capitalize">the list</a> -->
+    <a name="list">the list</a>
+    <ul>
+      <li><a href="http://google.com">http://google.com</a></li>
+      <li><a href="/tutorial">/tutorial.html</a></li>
+      <li><a href="local/path">local/path</a></li>
+      <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+      <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+      <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+    </ul>
+    <script>
+      // 获取带有 data-widget-name 特性（attribute）的元素，并读取它的值。
+      /* your code */
+      let value = document.querySelector("div").dataset.widgetName;
+      //   attribute-value
+      console.log(value);
+      //   elem-value
+      let elemValue = document.querySelector("div[data-widget-name]");
+      console.log(elemValue.innerHTML);
+    </script>
+    <script>
+      let cap = document.querySelector("[name='list']");
+      cap.setAttribute("style", "text-transform:capitalize;");
+      console.log(cap);
+      let lis = document.querySelectorAll("a[href*='://']:not([href^='http://internal.com'])");
+      for (const item of lis) {
+        item.setAttribute("style","color:orange")
+      }
+    </script>
+  </body>
+</html>

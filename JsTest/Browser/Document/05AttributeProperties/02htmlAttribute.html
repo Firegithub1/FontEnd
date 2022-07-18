@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body class="BB">
+    this is body
+    <div id="first">
+      <input type="text" id="input" value="fjslf" />
+    </div>
+
+    <script>
+      console.log(input.type); // text
+      console.log(first.type); //undefined：DOM 属性没有被创建，因为它不是一个标准的特性
+
+      console.log(document.body.hasAttribute("class"));
+      console.log(document.body.getAttribute("class"));
+      document.body.removeAttribute("class");
+      document.body.setAttribute("class", "red");
+      console.log(document.body.getAttribute("class"));
+      console.log('/********/');
+      console.log(document.body.attributes);
+      console.log(document.body.getAttribute("Class"));
+    //   alert(document.querySelector('#input').outerHTML);
+    for (const attr of input.attributes) {
+        console.log(`${attr.name}=${attr.value}`);
+    }
+    </script>
+  </body>
+</html>

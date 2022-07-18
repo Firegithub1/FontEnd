@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .order[order-state="new"] {
+        color: green;
+      }
+      .order[order-state="pending"] {
+        color: blue;
+      }
+      .order[order-state="canceled"] {
+        color: red;
+      }
+      .red {
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 自己设置的html特性 -->
+    <div show-info="name"></div>
+    <div show-info="age"></div>
+
+    <div id="divv" class="order" order-state="new">A new order</div>
+    <div class="order" order-state="pending">A pending order</div>
+    <div class="order" order-state="canceled">A canceled order</div>
+    <script>
+      let user = {
+        name: "Pete",
+        age: 10086,
+      };
+      for (const item of document.querySelectorAll("[show-info]")) {
+        let tmp = item.getAttribute("show-info");
+        item.innerHTML = user[tmp];
+      }
+
+      document
+        .querySelector('[order-state="canceled"]')
+        .setAttribute("class", "red");
+      // divv.setAttribute("class", "red order");
+      console.log(divv.getAttribute("class"));
+      divv.classList.add("red");
+      divv.classList.remove("order");
+    </script>
+  </body>
+</html>
