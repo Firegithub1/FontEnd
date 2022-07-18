@@ -1,0 +1,33 @@
+<html>
+
+<body>
+    <div>Begin</div>
+    <ul>
+        <li>Information</li>
+        <li>Information</li>
+    </ul>
+
+
+    <div>End</div>
+    <!--
+    <script>
+        for (let i = 0; i < document.body.childNodes.length; i++) {
+            console.log(document.body.childNodes[i]); // Text, DIV, Text, UL, ..., SCRIPT
+        }
+    </script> -->
+    <script>
+        for (const iterator of document.body.children) {
+            console.log(iterator);
+        }
+        for (const item of document.body.childNodes) {
+            console.log(item);
+        };
+        console.log("second:::",document.body.children[0]);
+        console.log("second:::",document.body.children[2]);
+        console.log("second:::",document.body.childNodes[1]);
+        console.log("second:::",document.body.childNodes[2]);
+    </script>
+
+</body>
+
+</html>

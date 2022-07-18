@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>1:1</td>
+            <td>2:2</td>
+            <td>3:3</td>
+            <td>4:4</td>
+            <td>5:5</td>
+        </tr>
+        <tr>
+            <td>1:1</td>
+            <td>2:2</td>
+            <td>3:3</td>
+            <td>4:4</td>
+            <td>5:5</td>
+        </tr>
+        <tr>
+            <td>1:1</td>
+            <td>2:2</td>
+            <td>3:3</td>
+            <td>4:4</td>
+            <td>5:5</td>
+        </tr>
+        <tr>
+            <td>1:1</td>
+            <td>2:2</td>
+            <td>3:3</td>
+            <td>4:4</td>
+            <td>5:5</td>
+        </tr>
+        <tr>
+            <td>1:1</td>
+            <td>2:2</td>
+            <td>3:3</td>
+            <td>4:4</td>
+            <td>5:5</td>
+        </tr>
+    </table>
+</body>
+<script>
+    let table = document.body.firstElementChild;
+    for (let i = 0, L = table.rows.length; i < L; i++) {
+        let rows = table.rows[i];
+        rows.cells[i].style.background = "blue";
+    }
+    //methods two  flase table is not iterator
+    // console.log( tbody);
+    // console.log( tbody instanceof Object);
+    // let cnt = 0;
+    // for (const item of tbody) {
+    //     console.log(item);
+    //     item.cells[cnt++].style.background = "blue";
+    // }
+</script>
+
+</html>
