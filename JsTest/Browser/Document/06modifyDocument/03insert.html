@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="background-color: wheat">
+      <p>10</p>
+      <p>20</p>
+      <p>30</p>
+    </div>
+    <ul style="background-color: purple">
+      <li>01</li>
+      <li>02</li>
+      <li>03</li>
+      <li>04</li>
+      <li>05</li>
+    </ul>
+  </body>
+  <script>
+    let append = "append"; //末尾（范围内）
+    let div = document.querySelector("div");
+    div.append(append);
+    let after = "after"; //后面（范围外）
+    let ul = document.querySelector("ul");
+    ul.after(after);
+
+    let prepend = "prepend"; //开头
+    ul.prepend(prepend, document.createElement("hr"));  //many
+    let before = "before"; //前面
+    div.before(before);
+
+    let h2 =document.createElement("h2");
+    h2.innerHTML="this is test replaceWith";
+    // 替换元素
+    ul.lastElementChild.replaceWith(h2)
+
+  </script>
+</html>

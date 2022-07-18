@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ol id="elem">
+      <li>Hello</li>
+      <li>World</li>
+    </ol>
+
+    <script>
+      let elem = document.querySelector("ol#elem");
+      // console.log(elem.children);
+      function clear(elem) {
+        /* 你的代码 */
+        console.log(elem.children);
+        // 1.
+        // elem.innerText='';
+        // 2.
+        // for (const item of elem.children) {
+        //   item.textContent = "";
+        // 3.
+        // setTimeout(() => {
+        //   document.write("hfjsfj")
+        // }, 1);
+        // }
+      }
+      function clear2(elem) {
+        for (let i = 0; i < elem.childNodes.length; i++) {
+          elem.childNodes[i].remove();
+        }
+      }
+      // clear(elem); // 清除列表
+      clear2(elem); // 清除列表
+    </script>
+  </body>
+</html>

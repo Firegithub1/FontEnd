@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p id="love">like favor <small>SSS</small> favorite love</p>
+      <p id="lovefjs">like favor <small>SSS</small> favorite love</p>
+    </div>
+  </body>
+  <script>
+
+    let love = document.getElementById("love");
+    console.log(love, "1111111111");
+    console.log(love.innerHTML);
+    console.log(love.innerText);
+    console.log(love.outerHTML);
+    console.log(love);
+  </script>
+  <script>
+    let like= document.querySelector("[id^='lo']:not([id$='ve'])")
+    console.log(like);
+  </script>
+</html>

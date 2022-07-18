@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <hr />
+    <div>
+      <p id="one">test insertAdjacentHTML01</p>
+      <p id="two">test insertAdjacentHTML02</p>
+      <p id="three">test insertAdjacentHTML03</p>
+    </div>
+    <script>
+      let div = document.querySelector("div");
+      // 开始的前面
+      div.insertAdjacentHTML("beforebegin", "<h2>this is test H2开始的前面");
+      // 开始后面
+      div.insertAdjacentHTML("afterbegin", "<h3>this is h3开始后面");
+      // 结束之前
+      div.insertAdjacentHTML("beforeend", "<h5>this is h5结束之前");
+      // 结束之后
+      div.insertAdjacentHTML("afterend", "<h6>this is h6结束之后");
+
+      document
+        .querySelector("#two")
+        .insertAdjacentHTML("beforebegin", "<li>2</li>");
+      let li3 = document.createElement("li");
+      li3.innerHTML = "3";
+      document.querySelector("#three").after(li3);
+    </script>
+  </body>
+</html>

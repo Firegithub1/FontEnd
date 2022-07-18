@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="table">
+      <thead>
+        aaa
+        <th>fjskf</th>
+      </thead>
+      <tr>
+        <td>test</td>
+      </tr>
+    </table>
+    <script>
+      // 这个题目中的 HTML 是错的。这就是造成怪异现象的原因。
+      // 浏览器必须自动修复它。但 <table> 内可能会没有文本：
+      // 根据规范，只允许特定于表格的标签。所以浏览器将 "aaa" 展示在了 <table> 前面。
+      // 当我们删除表格后，文本 "aaa" 仍然存在的原因就很明显了吧。
+      console.log(table);
+      table.remove();
+    </script>
+  </body>
+</html>

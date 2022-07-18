@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>After one second the contents of this page will be replaced...</p>
+    <script>
+      document.write("<b>HHHHHBy this.</b>");
+      // 1 秒后调用 document.write
+      // 这时页面已经加载完成，所以它会擦除现有内容
+      setTimeout(() => document.write("<b>...By this.</b>"), 1000);
+    </script>
+  </body>
+</html>
