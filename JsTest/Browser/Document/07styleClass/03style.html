@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="blue">
+      this test elem.style.backgroundColor
+      <ul>
+        <li id="margin">test display01</li>
+        <li>test display02</li>
+        <li class="three">test display03</li>
+        <li id="setAttr">test display04</li>
+      </ul>
+    </div>
+    <div id="cssText" style="color: gold">
+      <p>test cssText</p>
+      <p>test cssText</p>
+    </div>
+    <script>
+      document.querySelector("#blue").style.backgroundColor = "lavender";
+      //隐藏元素
+      document.querySelector(".three").style.display = "none";
+      //   移除style.display,不能使用delete
+      // 应该赋值为空
+      document.querySelector(".three").style.display = "";
+      //  elem.style.removeProperty('style property')
+      document.body.style.background = "lightgreen"; //将 background 设置为红色
+
+      setTimeout(() => document.body.style.removeProperty("background"), 1000); // 1 秒后移除 background
+      //   style.cssText进行完全的重写
+      //   会删除所有现有样式：它不是进行添加，而是替换它们。
+      //   TODO:div.style是一个对象
+      // 我们可以在这里设置特殊的样式标记，例如 "important"
+
+      cssText.style.cssText = `color: red !important;
+          background-color: yellow;
+          width: 100px;
+          text-align: center;`;
+      // FIXME: setAttribute 添加而不是重写
+      setAttr.setAttribute("style", "color:red");
+      setAttr.setAttribute("style", "color:black;background-Color:wheat");
+      //   setAttr.setAttribute("style", "background-Color:wheat");
+      // 注意单位
+      //    // 无效！
+      // document.body.style.margin = 20;
+      // alert(document.body.style.margin); // ''（空字符串，赋值被忽略了）
+      margin.style.margin = "20px";
+
+    </script>
+  </body>
+</html>

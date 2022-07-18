@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        color: red;
+        margin: 5px;
+      }
+      /* 选择未访问  */
+      a:link {
+        color: blue;
+      }
+      /* 已访问、 */
+      a:visited {
+        color: green;
+      }
+      /* 悬浮 */
+      a:hover {
+        color: red;
+      }
+      /* 活动链接  */
+      a:active {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    The red text
+    <ul>
+      <a href="">this is </a
+      ><a href="#">visited</a
+      ><a href="">active</a>
+    </ul>
+    <script>
+    //   alert(document.body.style.color); // 空的
+      //   alert(document.body.style.marginTop); // 空的
+
+      //   getComputedStyle
+      let computed = getComputedStyle(document.body);
+      alert(computed.margin); //5px
+    </script>
+  </body>
+</html>

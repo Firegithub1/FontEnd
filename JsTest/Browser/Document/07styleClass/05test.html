@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Notification is on the right</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum
+      aspernatur quam ex eaque inventore quod voluptatem adipisci omnis nemo
+      nulla fugit iste numquam ducimus cumque minima porro ea quidem maxime
+      necessitatibus beatae labore soluta voluptatum magnam consequatur sit
+      laboriosam velit excepturi laborum sequi eos placeat et quia deleniti?
+      Corrupti velit impedit autem et obcaecati fuga debitis nemo ratione iste
+      veniam amet dicta hic ipsam unde cupiditate incidunt aut iure ipsum
+      officiis soluta temporibus. Tempore dicta ullam delectus numquam
+      consectetur quisquam explicabo culpa excepturi placeat quo sequi molestias
+      reprehenderit hic at nemo cumque voluptates quidem repellendus maiores
+      unde earum molestiae ad.
+    </p>
+    <script>
+      // 在窗口的右上角附近显示一个带有文本 "Hello" 的元素
+
+      function showNotification(params) {
+        let div = document.createElement("div");
+        div.classList.add("welcome");
+        div.innerHTML = params.html;
+        div.style.cssText = `top:${params.top}px;right:${params.right}px;position:fixed;`;
+        document.body.append(div);
+        setTimeout(() => {
+          div.style.display = "none";
+        }, 1500);
+      }
+      let i = 1;
+      setInterval(() => {
+        showNotification({
+          top: 10, // 距窗口顶部 10px（默认为 0px）
+          right: 10, // 距窗口右边缘 10px（默认为 0px）
+          html: "Hello!" + i++, // 通知中的 HTML
+          className: "welcome", // div 的附加类（可选）
+        });
+      }, 2000);
+    </script>
+  </body>
+</html>
