@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function sayHi() {
+        alert('hello!')
+    }
+    // window.sayHi();
+    console.log(window.innerHeight); //窗口高度
+
+    document.body.style.background = "wheat";
+    setTimeout(() => {
+        document.body.style.background = ""
+    }, 1000);
+
+    // CSSOM 很少需要修改，多是添加，移除一些css类
+
+    console.log(location.href);
+    if (confirm("go to baidu.com?")) {
+        location.href ="https:baidu.com";
+    }
+</script>
+
+</html>
