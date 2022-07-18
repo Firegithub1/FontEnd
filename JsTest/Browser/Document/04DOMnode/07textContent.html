@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="news">
+      <h1>Headline!</h1>
+      <p>Martians attack people!</p>
+    </div>
+
+    <div id="elem1"></div>
+    <div id="elem2"></div>
+    <p id="test">这是段落中的 <b>粗体</b> 文本。</p>
+    <script>
+      console.log(news.textContent);
+    </script>
+    <script>
+      let name = prompt("what's your name?", "<b>Winnie-the-Pooh!</b>");
+      elem1.innerHTML = name; //html格式
+      elem2.textContent = name; //纯文本格式
+      console.log(test.textContent.trim());
+    </script>
+  </body>
+</html>

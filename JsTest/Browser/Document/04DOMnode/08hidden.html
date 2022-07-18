@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>Both divs below are hidden</div>
+
+    <div hidden>With the attribute "hidden"</div>
+
+    <div id="elem">JavaScript assigned the property "hidden"</div>
+    <div id="elem1">111111111111JavaScript assigned the property "hidden"</div>
+
+    <script>
+      elem1.hidden = false;
+      setInterval(() => {
+        elem.hidden = !elem.hidden;
+      }, 1000);
+    </script>
+  </body>
+</html>
