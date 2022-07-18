@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" value="apple" />
+      <input type="text" value="orange" />
+      <input type="text" value="banana" />
+    </div>
+  </body>
+  <script>
+    let inputs = document.body.getElementsByTagName("input");
+    for (const item of inputs) {
+      console.log(item.value);
+    }
+    let input = document.getElementByTagName("input")
+    // getElementByTagName 缺少s
+    console.log(input);
+  </script>
+</html>

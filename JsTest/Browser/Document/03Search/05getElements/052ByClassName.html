@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+   <form name="my-form">
+  <div class="article">Article</div>
+  <div class="long article">Long article</div>
+</form>
+
+<script>
+  // 按 name 特性查找
+  let form = document.getElementsByName('my-form')[0];
+
+  // 在 form 中按 class 查找
+  let articles = form.getElementsByClassName('article');
+  alert(articles.length); // 2, found two elements with class "article"
+  console.log(articles[0]);
+  console.log(articles[1]);
+</script>
+</html>

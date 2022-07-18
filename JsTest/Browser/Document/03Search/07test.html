@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="age-table">
+      <tbody>
+        <tr>
+          <td>Age</td>
+          <td><label for="sex">testSex</label></td>
+          <td><label for="surName">testsurName</label></td>
+          <td>name</td>
+        </tr>
+        <tr>
+          <td><input id="sex" value="sexsex" /></td>
+          <td><input id="surName" value="testsurName" /></td>
+          <td>012</td>
+          <td>123</td>
+        </tr>
+      </tbody>
+    </table>
+    <form action="" name="search">
+      <input type="text" value="this is first input" />
+      <input type="text" value="this is second input" />
+      <input type="text" value="this is last input" />
+    </form>
+    <script>
+      console.log("/*********111111*********/");
+      //1.带有 id="age-table" 的表格。
+      let table3 = document.getElementById("age-table");
+      console.log(table3);
+      let table1 = document.querySelectorAll("#age-table");
+      console.log(table1[0]);
+
+      console.log("/*********22222*********/");
+      //2.表格内的所有 label 元素（应该有三个）。
+      let labels = document.getElementsByTagName("label");
+      console.log(labels);
+      let labels1 = document.querySelectorAll("label");
+      console.log(labels1);
+      let labels2 = table3.querySelectorAll("label"); //由大到小范围  document > table3
+      console.log(labels2);
+
+      console.log("/*********33333*********/");
+      //3.表格中的第一个 td（带有 “Age” 字段）。
+      console.log(table3.rows[0].cells[0]);
+      let td1 = document.querySelector("td");
+      console.log(td1);
+      let td2 = document.getElementsByTagName("td");
+      console.log(td2[0]);
+
+      console.log("/*********44444*********/");
+      //4.有 name="search" 的 form。
+      let form = document.getElementsByName("search");
+      console.log(form);
+      let formQ = document.querySelector('[name$= "rch"]'); //[attribute$='rch']以什么结尾的
+      //   let formQ = document.querySelector('form[name$ = "search"]');
+      console.log(formQ);
+
+      console.log("/*********555555*********/");
+      //5.表单中的第一个 input
+      let inputs = document.getElementsByTagName("input");
+      console.log(inputs[0]);
+      //   form.querySelector("input");
+
+      console.log("/*********66666*********/");
+      // 6. 表单中的最后一个 input
+      let inputs2 = document.querySelectorAll("input");
+      console.log(inputs2);
+      let lastInput = inputs2[inputs.length - 1];
+      console.log(lastInput);
+
+      //   6 CSS selector
+      console.log("/*************/");
+      let lastInput2 = document.querySelector("input:first-of-type");
+      console.log(lastInput2);
+    </script>
+  </body>
+</html>
