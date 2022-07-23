@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        p {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        div.bgImg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        main {
+            margin-left: 15vw;
+            margin-right: 15vw;
+            height: 85vh;
+            display: flex;
+            opacity: 0.85;
+        }
+
+        article {
+            flex: 3;
+        }
+
+        aside {
+            flex: 1;
+        }
+
+        #mes_left {
+            float: left;
+            border: 2px aqua;
+            max-width: 490px;
+        }
+
+        #mes_right {
+            float: right;
+            border: 2px aqua;
+            max-width: 490px;
+        }
+
+        hr {
+            /*透明渐变水平线*/
+            width: 80%;
+            margin: 0 auto;
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right,
+                    rgba(0, 0, 0, 0),
+                    rgba(0, 0, 0, 0.75),
+                    rgba(0, 0, 0, 0));
+        }
+
+        textarea {
+            resize: none;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bgImg"><img src="second.jpg" class="w-100 h-100" alt="" /></div>
+    <header>
+        <div id="username" class="text-center mt-5">
+            <h5>用户：张三<span>-在线</span></h5>
+        </div>
+    </header>
+    <main id="contains">
+        <article class="h-85 bg-light">
+            <section class="h-75">
+                <div id="Inchat" class="text-center"></div>
+                <hr />
+                <div id="content" style="visibility: hidden"></div>
+            </section>
+            <section id="input" class="h-25 position-relative" style="bottom: 1px">
+                <hr />
+                <textarea type="text" id="input_text" class="w-100 h-100"></textarea>
+                <button type="button" id="submit" class="btn col-sm-2 btn-light position-relative"
+                    style="float: right; top: -30%; right: 5%">
+                    发送
+                </button>
+            </section>
+        </article>
+        <aside class="text-center bg-white h-85">
+            <section class="h-50">
+                <h5 id="hy" class="bg-light">好友列表</h5>
+                <div id="hyList " class="overflow-auto"></div>
+            </section>
+            <section class="h-50">
+                <h5 id="xt" class="bg-light">系统消息</h5>
+                <div id="xtList" class="overflow-auto"></div>
+            </section>
+        </aside>
+    </main>
+
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+    <!--小帅哥： https://unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json-->
+    <!--萌娘：https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json-->
+    <!--小可爱（女）：https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json-->
+    <!--小可爱（男）：https://unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json-->
+    <!--初音：https://unpkg.com/live2d-widget-model-miku@1.0.5/assets/miku.model.json-->
+    <!-- 上边的不同链接显示的是不同的小人，这个可以根据需要来选择 下边的初始化部分，可以修改宽高来修改小人的大小，或者是鼠标移动到小人上的透明度，也可以修改小人在页面出现的位置。 -->
+    <script>
+        /*https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json*/
+        L2Dwidget.init({
+            model: {
+                jsonPath:
+                    "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
+                scale: 1,
+            },
+            display: {
+                position: "right",
+                width: 110,
+                height: 150,
+                hOffset: 0,
+                vOffset: -20,
+            },
+            mobile: { show: true, scale: 0.5 },
+            react: { opacityDefault: 0.8, opacityOnHover: 0.1 },
+        });
+    </script>
+</body>
+
+</html>
