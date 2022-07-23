@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+            width: 300px;
+        }
+
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+
+        td {
+            font: 14px "微软雅黑";
+        }
+
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <table>
+            <!--全选反选按钮所在行-->
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="selectAll" />
+                    </th>
+                    <th>菜名</th>
+                    <th>饭店</th>
+                </tr>
+            </thead>
+
+            <!--每一个菜的选项-->
+            <tbody id="cai">
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>红烧肉</td>
+                    <td>田老师</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>西红柿鸡蛋</td>
+                    <td>田老师</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>红烧狮子头</td>
+                    <td>田老师</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>日式肥牛</td>
+                    <td>田老师</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        //1.获取元素
+        var selectAll = document.querySelector('#selectAll');
+        var ipts = document.querySelectorAll('#cai input');
+        //2.设置全选事件
+        selectAll.onclick = function () {
+            for (var i = 0; i < ipts.length; i++) {
+                ipts[i].checked = selectAll.checked; //tbody中的复选框的选中状态和thead中的选中状态相同即可
+            }
+        }
+        //3.设置反选事件
+        //设置计数器，用来计算tbody中选中状态的复选框个数
+        var count = 0;
+        for (var i = 0; i < ipts.length; i++) {
+            ipts[i].onclick = function () {
+                this.checked ? count++ : count--;
+                selectAll.checked = count === ipts.length; //判断count和tbody中的复选框个数是否相等，如果相等thead中复选框选中，反之这不选中
+            }
+        }
+    </script>
+</body>
+
+</html>```

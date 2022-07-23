@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span style="white-space:pre">afja;fsj </span>
+    <input type="button" value="全选" class="btn" id="selectAll">
+    <input type="button" value="全不选" class="btn" id="unSelect">
+    <input type="button" value="反选" class="btn" id="reverse">
+    <div id="owners">
+        <input type="checkbox" name="" id="">first
+        <input type="checkbox" name="" id="">second
+        <input type="checkbox" name="" id="">third
+    </div>
+</body>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    $("#selectAll").click(function () {
+        $("#owners input:checkbox").each(function () {
+            $(this).prop('checked', true); //
+
+        });
+    });
+
+    $("#unSelect").click(function () {
+        $("#owners input:checkbox").removeAttr("checked");
+    });
+
+    $("#reverse").click(function () {
+        $("#owners input:checkbox").each(function () {
+            this.checked = !this.checked;
+        });
+    });
+</script>
+
+</html>
