@@ -8,13 +8,13 @@
 
 ### JavaScript
 - 基础JS语法及实列
-- 复杂的方法：ES6~ES11	
+- 复杂的方法：ES6~ES11
 
 ### Node
 - 基础
 	- 进程和线程
 	- module.exports和exports
-	- Common规范（理论）
+	- CommonJS规范（理论）
 	- npm(Node Package Manager)[实践]
 	- Node 搜索包的流程
 	- npm常用指令
@@ -29,4 +29,3 @@
 -	使用Babel(ES6=>ES5)
 
 ....
-	
