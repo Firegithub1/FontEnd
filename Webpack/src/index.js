@@ -7,6 +7,7 @@
 // new Footer();
 
 console.log("222222");
+console.log("3333333333");
 
 const arrow = (num1, num2) => num1 + num2;
 
