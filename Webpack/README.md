@@ -37,7 +37,7 @@
         ```
 - 3.package.json设置script的"dev":"webpack-dev-server"
 
-### 使用Babel(ES6=>ES5)
+### 使用 Babel (ES6=>ES5)
 - 1.安装babel
     npm i @babel/core @babel/preset-env babel-loader --save
 - 2.配置.babelrc文件（json格式）

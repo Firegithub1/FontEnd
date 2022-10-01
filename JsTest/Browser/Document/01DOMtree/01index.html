@@ -13,7 +13,11 @@
 </body>
 <script>
     function sayHi() {
-        alert('hello!')
+        // alert('hello!')
+        if (confirm("go to baidu.com?")) {
+            location.href = "https:baidu.com";
+        }
+
     }
     // window.sayHi();
     console.log(window.innerHeight); //窗口高度
@@ -26,9 +30,7 @@
     // CSSOM 很少需要修改，多是添加，移除一些css类
 
     console.log(location.href);
-    if (confirm("go to baidu.com?")) {
-        location.href ="https:baidu.com";
-    }
+
 </script>
 
 </html>
