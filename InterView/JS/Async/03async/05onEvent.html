@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .none {
+      display: none;
+    }
+
+    .app {
+      display: block;
+    }
+
+    .white {
+      color: black;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .hidden1 {
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+
+<body>
+  <main>
+
+    <div id="div" onclick="sayRed()">you know is very beautiful
+    </div>
+    <p id="p" class="black">really?</p>
+    <button onclick="hidden1()">hidden visibility</button>
+    <button onclick="hidden2()" id="hidden">this is test p HTML hidden</button>
+    <div onclick="recovery()">this is recovery p display block</div>
+  </main>
+</body>
+<script>
+  let div = document.querySelector("#div")
+  let p = document.querySelector("#p")
+
+  //test classList
+  function sayRed() {
+    alert("Redddddd");
+  }
+  div.addEventListener('click',toOrange)
+
+  //test addEventListener
+  function toOrange() {
+    p.style.color = "orange"
+    alert("yes is onEvent,now is Orange")
+  }
+
+  //test hidden
+  function hidden1() {
+    p.classList.toggle("hidden1")
+  }
+  function hidden2() {
+    p.setAttribute("hidden", "true"); //true
+  }
+  function recovery() {
+    p.style.display = "block"
+
+  }
+// 容易理解，可以绑定多个事件，可以去耦合，有利于实现模块化
+// 编程事件驱动型，流程会变得不清晰
+</script>
+
+</html>
