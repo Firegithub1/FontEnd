@@ -1,0 +1,58 @@
+<!-- rem:
+rem是全部的长度都相对于根元素
+<html>元素。通常做法是给html元素设置一个字体大小，
+然后其他元素的长度单位就为rem。-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        div {
+            font-size: 4rem;
+            /* 40px */
+            width: 20rem;
+            /* 200px */
+            height: 20rem;
+            border: solid 2px black;
+        }
+
+        p {
+            font-size: 2rem;
+            /* 20px */
+            width: 10rem;
+            height: 10rem;
+            border: solid 1px blue;
+            color: blue;
+        }
+
+        span {
+            font-size: 1.5rem;
+            width: 7rem;
+            height: 6rem;
+            border: solid 2px red;
+            display: block;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        父元素div
+        <p>
+            子元素p
+            <br>
+            <span>孙元素span</span>
+        </p>
+    </div>
+</body>
+
+</html>

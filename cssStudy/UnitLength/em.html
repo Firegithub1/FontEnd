@@ -1,0 +1,60 @@
+<!-- em:
+子元素相对于父元素font-size
+自身相对于自身的font-size -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-size: 40px;
+            /*
+     即1em = 40px = font-size
+     */
+            width: 7.5em;
+            /* 300px */
+            height: 7.5em;
+            border: solid 2px black;
+        }
+
+        p {
+            font-size: 0.5em;
+            /* 20px */
+            /*
+     上面的em以p的父亲的font-size为基准
+     下面的em以p的font-size为基准
+     */
+            width: 7.5em;
+            /* 150px */
+            height: 7.5em;
+            border: solid 2px blue;
+            color: blue;
+        }
+
+        span {
+            font-size: 0.5em;
+            width: 7em;
+            height: 6em;
+            border: solid 1px red;
+            display: block;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        父元素div
+        <p>
+            子元素p
+            <br>
+            <span>孙元素span</span>
+        </p>
+    </div>
+</body>
+
+</html>
