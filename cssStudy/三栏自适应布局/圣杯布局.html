@@ -8,74 +8,65 @@
     <title>Document</title>
     <style>
         #container {
-            /* height: 300px; */
+            height: 300px;
             background-color: tan;
-            padding-left: 100px;
-            padding-right: 100px;
-            overflow: hidden;
+            padding: 0 100px;
         }
 
-        .box1,
-        .box3 {
-            width: 100px;
-            height: 50px;
+        .column {
             float: left;
         }
 
-        .left {
+        .box {
+            width: 100px;
+            height: 50px;
+            float: left;
+            background-color: red;
+        }
 
+        .left {
+            margin-left: -100%;
             position: relative;
             left: -100px;
-            margin-left: -100%;
-            background-color: steelblue;
         }
 
         .right {
-
-            position: relative;
-
-            /* margin-right: -100px; */
-            margin-right: -100%;
-            background-color: skyblue;
+            margin-right: -100px;
         }
 
         .center {
             height: 50px;
             width: 100%;
-
-            float: left;
             background-color: rgb(91, 219, 219);
-
             overflow: hidden;
         }
 
-        .header {
-            height: 150px;
-            background-color: wheat;
-        }
-
-        .footer {
-            height: 150px;
-            background-color: beige;
-            /* clear: both; */
-            /* clear float */
-        }
+        /* .clearbox {
+            clear: both;
+        } */
     </style>
 </head>
-<!-- 两边边框放在前面 脱离普通文档流 -->
-<!-- 圣杯布局就是将基本布局之后使用向左浮动，middle栏留出两边位置
-    ，然后使用相对定位将左右两栏通过margin-left定位到相应位置 -->
+<!-- 圣杯布局 -->
+<!-- 外部div设置margin-left/right -->
+<!-- 布局center,left,right float:left   作用在同一行 -->
+<!-- center 放在开头，设置宽为:100% 作用：为下两个布局做铺垫 -->
+<!-- left：ML:-100% 此时与上一行重叠 -->
+<!-- position:relative 相对自身左移自身单位距离 -->
+<!-- right:mr:-100px 接上文同一行，原理右边自身单位距离 -->
+
+<!-- 清除浮动 -->
+<!-- 1.布局框添加div父元素 -->
+<!-- 2.清除浮动：clear -->
+<!-- 3.布局框(父元素)设置overflow -->
 
 <body>
-    <div class="header">header</div>
     <div id="container">
-        <div class="center">center</div>
-        <div class="box1 left">left</div>
-        <div class="box3 right">right</div>
+        <div class="column center">center</div>
+        <div class="column box left">left</div>
+        <div class="column box right">right</div>
     </div>
-    <div class="footer">footer</div>
+    <div class="center clearbox">dfjkasfj;sf</div>
 
-    </div>
 </body>
 
 </html>

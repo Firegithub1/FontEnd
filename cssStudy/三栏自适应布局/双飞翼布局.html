@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>双飞翼布局</title>
     <style>
+        *{
+            margin: 0;
+        }
         /* #container {
             /* height: 300px; */
         /* background-color: tan; */
@@ -24,9 +27,7 @@
             width: 100%;
         }
 
-        .center-wrap,
-        .left,
-        .right {
+       .column{
             float: left;
 
         }
@@ -66,11 +67,11 @@
 <body>
     <div class="header">header</div>
     <div>
-        <div class="center-wrap">
+        <div class="column center-wrap">
             <div class="center">center</div>
         </div>
-        <div class="left">left</div>
-        <div class="right">right</div>
+        <div class="left column">left</div>
+        <div class="right column">right</div>
 
     </div>
 
