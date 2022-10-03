@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        main {
+            background-color: wheat;
+        }
+
+        .center {
+            height: 50px;
+            margin: 0 100px;
+            /* margin-left: 100px; */
+            /* margin-right: 100px; */
+            background-color: yellow;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .left {
+            height: 50px;
+            width: 100px;
+            background-color: lightskyblue;
+
+            margin-left: -100%;
+        }
+
+        .right {
+            height: 50px;
+            width: 100px;
+            background-color: lightgoldenrodyellow;
+            margin-left: -100px;
+        }
+
+        .column {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class=" column container">
+            <div class="center ">center</div>
+        </div>
+        <div class="left column">left</div>
+        <div class="right column">right</div>
+    </main>
+</body>
+
+</html>
