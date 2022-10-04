@@ -13,17 +13,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎇CSS绘制五角星</title>
     <link rel="stylesheet" href="five-pointedStar.css">
+    <style>
+        .retangle {
+            width: 0;
+            height: 0;
+            border: 50px solid;
+            border-color: lightgreen transparent transparent;
+        }
+
+        .semicircle {
+            width: 100px;
+            height: 50px;
+            border-radius: 50px 50px 0 0;
+            background-color: lavender;
+        }
+    </style>
 </head>
 
 <body>
     <div style="text-align: center;background-color: lavender;">
         <p>🎇CSS绘制五角星</p>
 
-        <div id="star-five">12</div>
+        <!-- <div id="star-five">12</div>
         <div id="retangle">1</div>
-        <div id="meter"></div>
+        <div id="meter"></div> -->
     </div>
-
+    <div>
+        <div class="retangle"></div>
+        <div class="semicircle"></div>
+    </div>
 </body>
 
 </html>
