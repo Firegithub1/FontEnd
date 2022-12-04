@@ -1,0 +1,18 @@
+{
+  "main": "index.html",
+  "logo": "bg.png",
+  "features": [
+    {
+      "code": "uslike",
+      "explain": "our Time~",
+      "cmds": [
+        "us",
+        "我们",
+        "time",
+        "时间"
+      ]
+    }
+  ],
+  "author": "YiFreerFiY",
+  "license": "ISC"
+}

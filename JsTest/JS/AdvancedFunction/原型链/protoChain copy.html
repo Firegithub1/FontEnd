@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function log(params) {
+            console.log(params);
+        }
+
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            // 构造函数添加方法，所有实例可见
+            this.say = function () {
+                // console.info(this.name)
+                return this.name;
+            }
+        }
+        // 原型添加方法，通过内存获取方法
+        Person.prototype.say111 = () => log(111);
+        let p1 = new Person("p1");
+        let p2 = new Person("p2");
+
+        // 实例对象的隐式原型指向构造函数的显式原型
+        console.log(p1.__proto__ === Person.prototype);
+        console.log(p1.__proto__ === p2.__proto__);
+        // 构造函数(对象)的隐式原型指向Function.prototype
+        log(Person.__proto__ === Function.prototype)
+        // 构造函数的显式原型含有constructor
+        console.log(Person.prototype);
+        // constructor是原型上的属性，这个属性是一个方法
+        log('查看prototype里面的constructor')
+        log(Person.prototype.constructor)
+        log(Person.constructor)
+        log(Person.constructor())
+        log(p1.say());
+        // 可以使用constructor创建新的实例对象
+        let p3 = new p1.__proto__.constructor("p3");
+        log(p3.name)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function log(params) {
+            console.log(params);
+        }
+        // 函数有显示原型,也有隐式原型
+
+        function Person(age) {
+            this.age = age
+        }
+        let p1 = new Person("p1");
+        let p2 = new Person("p2");
+
+        // 构造函数也是一个对象
+        // 构造函数的隐式原型是Function的prototype
+        log(Person.__proto__ === Function.prototype)
+        // Function的显示原型
+        log(Function.prototype)
+        // Function的显示原型对象的隐式原型是Object.prototype
+        log(Function.prototype.__proto__ === Object.prototype) //true
+        // Function也是一个对象
+        // Function的隐式原型等于他的显示原型  //false
+        log(Function.__proto__ === Function.prototype) //true
+
+</script>
+</body>
+
+</html>
